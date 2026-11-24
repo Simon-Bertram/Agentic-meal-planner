@@ -5,9 +5,10 @@ A short guide you can repeat on any Python project that needs API keys
 
 ## What a `.env` file is
 
-A `.env` file in the project root holds environment variables as
-`KEY=value` lines. It is for **local secrets** (API keys, tokens). Keep
-it out of git so keys never land in the repo history.
+A `.env` file in the project root (`python/` in this monorepo) holds
+environment variables as `KEY=value` lines. It is for **local secrets**
+(API keys, tokens). Keep it out of git so keys never land in the repo
+history.
 
 Example (placeholders only):
 
@@ -17,7 +18,7 @@ OPENAI_API_KEY=sk-your-key-here
 
 ## Create the files
 
-1. Create `.env` in the project root with your real key.
+1. Create `.env` in the project root (`python/`) with your real key.
 2. Optionally create `.env.example` with empty or fake values so others
    know which variables are required:
 
@@ -86,7 +87,7 @@ Call `load_dotenv()` **before** you create the client or read env vars.
 
 ## Verify
 
-From the project root:
+From `python/`:
 
 ```bash
 uv run python -c "from meal_planner.get_completion import client; print(bool(client.api_key))"

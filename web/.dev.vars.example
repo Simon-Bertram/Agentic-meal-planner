@@ -1,0 +1,5 @@
+# Local Worker secrets for astro dev / wrangler (copy to .dev.vars — never commit .dev.vars)
+GEMINI_API_KEY=
+TURNSTILE_SECRET_KEY=
+# Optional public site key used by the form island later
+PUBLIC_TURNSTILE_SITE_KEY=
