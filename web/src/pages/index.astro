@@ -1,9 +1,18 @@
 ---
+import { env } from 'cloudflare:workers'
+import BrandHeader from '../components/brand-header.astro'
+import MealPlannerForm from '../components/meal-planner-form'
 import Layout from '../layouts/Layout.astro'
+
+const turnstileSiteKey =
+	import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ??
+	env.PUBLIC_TURNSTILE_SITE_KEY ??
+	''
 ---
 
 <Layout title="Meal Planner">
 	<main>
-		<h1>Meal Planner</h1>
+		<BrandHeader />
+		<MealPlannerForm client:load turnstileSiteKey={turnstileSiteKey} />
 	</main>
 </Layout>

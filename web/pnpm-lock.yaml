@@ -41,7 +41,7 @@ importers:
         version: 26.6.6
       ultracite:
         specifier: 8.3.1
-        version: 8.3.1(@biomejs/biome@2.6.8)
+        version: 8.3.1(@biomejs/biome@2.6.8)(prettier@3.10.1)
 
 packages:
 
@@ -2161,6 +2161,11 @@ packages:
     peerDependenciesMeta:
       preact-render-to-string:
         optional: true
+
+  prettier@3.10.1:
+    resolution: {integrity: sha512-70vp3ZUYoPlFbF9uiTdXHUUCGEIp7d4+6p+8DYbkm2jP7x/3i/paXVF6dopSI3zd/CEitrZN1rc4i85xWmmXlg==}
+    engines: {node: '>=14'}
+    hasBin: true
 
   pretty-ms@9.3.1:
     resolution: {integrity: sha512-HzMy3Geq23nVALD/M2LliU+F+M+gVNsvkQWWqeBZ8HDiCgzo6YPJ/Omrmtq24EFrIsk0a3EkQGEd7bDOo+IhGA==}
@@ -4615,6 +4620,9 @@ snapshots:
     optionalDependencies:
       preact-render-to-string: 6.8.3(preact@11.2.0)
 
+  prettier@3.10.1:
+    optional: true
+
   pretty-ms@9.3.1:
     dependencies:
       parse-ms: 4.0.0
@@ -4865,7 +4873,7 @@ snapshots:
 
   ufo@1.6.4: {}
 
-  ultracite@8.3.1(@biomejs/biome@2.6.8):
+  ultracite@8.3.1(@biomejs/biome@2.6.8)(prettier@3.10.1):
     dependencies:
       '@clack/prompts': 1.9.0
       cli-truncate: 6.2.0
@@ -4888,6 +4896,7 @@ snapshots:
       zod: 4.6.7
     optionalDependencies:
       '@biomejs/biome': 2.6.8
+      prettier: 3.10.1
 
   ultrahtml@1.7.0: {}
 
